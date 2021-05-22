@@ -1,15 +1,14 @@
- 
 import pickle
 import streamlit as st
  
-# loading the trained model
+
 pickle_in = open('classifier.pkl', 'rb') 
 classifier = pickle.load(pickle_in)
  
 @st.cache()
 
   
-# defining the function which will make the prediction using the data which the user inputs 
+ 
 def prediction(school, sex, age, address, famsize, Medu, Fedu, traveltime, studytime, famsup, activities, higher, romantic, famrel, freetime):   
  
     # Pre-processing user input    
@@ -67,7 +66,7 @@ def prediction(school, sex, age, address, famsize, Medu, Fedu, traveltime, study
     return pred
       
   
-# this is the main function in which we define our webpage  
+ 
 def main():       
     # front end elements of the web page 
     html_temp = """ 
@@ -79,7 +78,7 @@ def main():
     # display the front end aspect
     st.markdown(html_temp, unsafe_allow_html = True) 
       
-    # following lines create boxes in which user can enter data required to make prediction 
+
     school = st.selectbox('School',("GP","MS"))
     sex = st.selectbox('Gender',("Male","Female")) 
     age = st.number_input("Age")
