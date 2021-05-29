@@ -1,1 +1,6 @@
-streamlit
+streamlit== 0.82.0
+pandas == 1.2.2
+numpy == 1.18.4
+matplotlib == 3.2.1
+seaborn == 0.11.1
+pyngrok == 
